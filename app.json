@@ -20,7 +20,7 @@
     "repository": "https://github.com/LazyDeveloperr/LazyPrincessV2",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token.",
+            "description": " token.",
             "required": true
         },
         "API_ID": {
