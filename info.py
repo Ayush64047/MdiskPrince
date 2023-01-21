@@ -14,13 +14,13 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'MdiskPrince')
 API_ID = int(environ.get('API_ID', '13323016'))
 API_HASH = environ.get('API_HASH', '68e791e616100248b0a53ae86a661a12')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5390002514:AAF__YybL_y9LYeIXhZ-ZVjBYADmTJbO1n8")
 
 #Port
 PORT = environ.get("PORT", "8080")
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 30))
+CACHE_TIME = int(environ.get('CACHE_TIME', 5))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://te.legra.ph/file/37386c6a062d1f01ee2e3.jpg')).split()
 
@@ -71,8 +71,8 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'omegalinks.in')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '3befcff717ba31fdf6124783eef8692178947ad8')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'shorturllink.in')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '652e60db3da459d3f15dbb1775fa0aaf62b6ec4c')
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 100))
@@ -81,8 +81,9 @@ if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
+
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/mdisk_bots/14"
+DOWNLOAD_TEXT_URL = "https://t.me/mdisk_bots"
 
    # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
