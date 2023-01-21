@@ -383,7 +383,7 @@ async def get_shortlink(link):
         https = "https"
         link = link.replace("http", https)
 
-    url = f'https://api.omegalinks.in/shortLink'
+    url = f'https://omegalinks.in/api'
     params = {'token': URL_SHORTNER_WEBSITE_API,
               'link': link,
               'format': 'json'
@@ -394,11 +394,11 @@ async def get_shortlink(link):
             async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
                 data = await response.json(content_type='text/html')
                 if data["status"] == "success":
-                    return data['shortlink']
+                    return data['api']
                 else:
                     logger.error(f"Error: {data['message']}")
-                    return f'https://api.omegalinks.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'
+                    return f'https://omegalinks.in/api?token={URL_SHORTNER_WEBSITE_API}&link={link}'
 
     except Exception as e:
         logger.error(e)
-        return f'https://api.omegalinks.in/directLink?token={URL_SHORTNER_WEBSITE_API}&link={link}'
+        return f'https://omegalinks.in/api?token={URL_SHORTNER_WEBSITE_API}&link={link}'
